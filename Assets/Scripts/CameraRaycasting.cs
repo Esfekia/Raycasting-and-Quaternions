@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraRaycasting : MonoBehaviour
-{
+{    
     private void FixedUpdate()
     {
         // hit variable to store our results
@@ -15,11 +15,15 @@ public class CameraRaycasting : MonoBehaviour
         // coundct our Raycast
         if (Physics.Raycast(ray, out hit))
         {
-            hit.collider.gameObject.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.yellow);
+            
+            hit.collider.gameObject.GetComponent<MeshRenderer>().material.SetColor("_Color", Color.yellow);       
+                        
         }
         else
         {
             Debug.Log("We didn't hit anything.");
         }
+        
+        
     }
 }
