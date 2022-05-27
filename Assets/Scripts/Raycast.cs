@@ -10,9 +10,9 @@ public class Raycast : MonoBehaviour
         Ray ray = new Ray(transform.position, transform.forward);
 
         // RaycastHit variable to store results of our raycast
-
         RaycastHit hit;
 
+        //Conduct the raycast and respond to hit
         if(Physics.Raycast(ray, out hit))
         {
             Debug.DrawRay(transform.position, ray.direction * hit.distance, Color.yellow);
